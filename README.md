@@ -1,7 +1,7 @@
 # Licensing Compliance Tracker
 
 A producer licensing register in MariaDB, with a Python report that
-flags lapsed and expiring licenses every weekday morning.
+flags lapsed and expiring licenses every Monday morning.
 
 ![Exceptions tab of the report](report-screenshot.png)
 
@@ -19,8 +19,7 @@ records like these, and this report finds them first.
   workbook: Dashboard, Expiring Soon, Exceptions and Full Roster.
 - The Exceptions tab lists licenses that expired but are still marked
   active, and active producers with no license on file.
-- cron runs the report at 6:00 AM, Monday to Friday, and logs each run.
-
+- cron runs the report every Monday at 6:00 AM and logs each run.
 ## Stack
 
 Debian 13, MariaDB 11.8, Python 3.13, PyMySQL, openpyxl, cron
